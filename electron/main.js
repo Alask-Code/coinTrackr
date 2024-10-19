@@ -1,20 +1,11 @@
-const { app, BrowserWindow } = require('electron');
+process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = true;
+require('electron-reload')('../');
 
-function createWindow () {
-  const win = new BrowserWindow({
-    height: 600,
-    width: 800,
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
-      enableRemoteModule: true
-    },
-    title: 'My App'
-  });
+const { app } = require('electron');
+const createTray = require('./Tray');
 
-  win.setTitle('My App');
-  win.loadFile('index.html');
-  win.webContents.openDevTools();
-}
+app.whenReady().then(() => {
+  createTray();
+});
 
-app.whenReady().then(createWindow);
+app.setAppUserModelId('coinTrackr');
