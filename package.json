@@ -1,20 +1,21 @@
 {
   "name": "cointrackr",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "electron/main.js",
   "scripts": {
-    "test": "lite-server ."
+    "test": "electron ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Alask-Code",
+  "license": "LGPL-3.0-or-later",
   "devDependencies": {
-    "@electron-internal/eslint-config": "^1.0.1",
     "eslint": "^8.57.1",
-    "eslint-plugin-node": "^11.1.0"
+    "electron": "^33.0.1",
+    "electron-builder": "^25.1.8",
+    "eslint-plugin-node": "^11.1.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "@electron-internal/eslint-config": "^1.0.1"
   },
   "dependencies": {
-    "dot-env": "^0.0.1"
+    "dotenv": "^16.4.5"
   }
 }
