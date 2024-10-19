@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lite-server ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@electron-internal/eslint-config": "^1.0.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-node": "^11.1.0"
+  },
+  "dependencies": {
+    "dot-env": "^0.0.1"
+  }
 }
