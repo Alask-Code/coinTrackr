@@ -1,0 +1,16 @@
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin backgroundImage($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

@@ -7,6 +7,7 @@ async function init () {
   const timestamp = new Date(btcData.last_updated);
   updateElements(btcData, timestamp);
 }
+
 async function App () {
   init();
   setInterval(async () => {
