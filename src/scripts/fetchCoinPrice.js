@@ -1,10 +1,5 @@
-async function fetchCoinPrice (coin, currency, {
-  localization = Boolean,
-  ticker: tickers = Boolean,
-  communityData = Boolean,
-  developerData = Boolean
-}) {
-  return await fetch(`${process.env.API_ENDPOINT}/coins/${coin}?localization=${localization}&tickers=${tickers}&community_data=${communityData}&developer_data=${developerData}`, {
+async function fetchCoinPrice (coin, params) {
+  return await fetch(`${process.env.API_ENDPOINT}/coins/${coin}?localization=${params.localization}&tickers=${params.tickers}&community_data=${params.communityData}&developer_data=${params.developerData}`, {
     method: 'GET',
     headers: {
       accept: 'application/json',
@@ -14,14 +9,12 @@ async function fetchCoinPrice (coin, currency, {
     .then(response => response.json());
 }
 
-const defaultFlags = {
-  localization: false,
-  ticker: false,
-  communityData: false,
-  developerData: false
-};
-
 module.exports = {
   fetchCoinPrice,
-  defaultFlags
+  defaultFlags: {
+    localization: false,
+    tickers: false,
+    communityData: false,
+    developerData: false
+  }
 };

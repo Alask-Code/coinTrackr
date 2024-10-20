@@ -7,22 +7,24 @@ body {
 }
 .app {
   @include flex(space-around, center, row);
-  gap: 8px;
-  width: 100%;
-  height: 100%;
-  border-radius: 2px;
+  gap: 32px;
+  padding: 8px;
+  border-radius: 4px;
   background: #e0e1dd;
   @media (prefers-color-scheme: dark) {
-    background: red;
   }
 }
 .coin-image {
   @include size(60px, 60px);
   @include backgroundImage("https://placehold.co/600x600");
 }
-
+.coin-price-change {
+  padding: 6px;
+  color: #e0e1dd;
+  border-radius: 32px;
+  background: seagreen;
+}
 .last-updated {
-  color: black;
   font-size: 8px;
   position: fixed;
   bottom: 12px;
