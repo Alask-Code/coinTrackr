@@ -3,30 +3,18 @@
 
 body {
   @include flex(center, center, row);
-  padding: 2px;
 }
 .app {
-  @include flex(space-around, center, row);
-  gap: 32px;
-  padding: 8px;
-  border-radius: 4px;
-  background: #e0e1dd;
-  @media (prefers-color-scheme: dark) {
-  }
+  @include size(100%, 100%);
+  padding: 12px;
+  border-radius: 12px;
+  background: whitesmoke;
 }
-.coin-image {
+.row {
+  @include flex(space-between, center, row);
+  gap: 16px;
+}
+.row .image {
   @include size(60px, 60px);
   @include backgroundImage("https://placehold.co/600x600");
-}
-.coin-price-change {
-  padding: 6px;
-  color: #e0e1dd;
-  border-radius: 32px;
-  background: seagreen;
-}
-.last-updated {
-  font-size: 8px;
-  position: fixed;
-  bottom: 12px;
-  right: 12px;
 }
