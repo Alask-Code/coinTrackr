@@ -3,10 +3,10 @@ require('dotenv').config();
 async function init () {
   const { fetchCoinPrice, defaultFlags: flags } = require('./scripts/fetchCoinPrice');
   const { updateElements } = require('./scripts/updateElements');
-  const btcData = await fetchCoinPrice('bitcoin', flags);
-  console.log(btcData);
-  const timestamp = new Date(btcData.last_updated);
-  updateElements(btcData, timestamp, 'usd');
+  const cryptoData = await fetchCoinPrice('bitcoin', flags);
+  console.log(cryptoData);
+  const timestamp = new Date(cryptoData.last_updated);
+  updateElements(cryptoData, timestamp, 'usd');
 }
 
 async function App () {

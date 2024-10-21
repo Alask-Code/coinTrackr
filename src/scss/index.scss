@@ -6,15 +6,23 @@ body {
 }
 .app {
   @include size(100%, 100%);
-  padding: 12px;
-  border-radius: 12px;
+  @include flex(space-between, center, column);
+
+  padding: 18px;
+  border-radius: 24px;
   background: whitesmoke;
 }
 .row {
   @include flex(space-between, center, row);
+  @include size(100%, fit-content);
+
   gap: 16px;
 }
 .row .image {
-  @include size(60px, 60px);
+  @include size(90px, 90px);
   @include backgroundImage("https://placehold.co/600x600");
+}
+.last-updated {
+  position: fixed;
+  bottom: 48px;
 }
