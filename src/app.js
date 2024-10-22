@@ -8,10 +8,10 @@ const flags = {
 async function init () {
   const fetchCoinPrice = require('./api/fetchCripto');
   const { updateElements } = require('./scripts/updateElements');
-  const cryptoData = await fetchCoinPrice('bitcoin', flags);
+  const cryptoData = await fetchCoinPrice('ethereum', flags);
   console.log(cryptoData);
   const timestamp = new Date(cryptoData.last_updated);
-  updateElements(cryptoData, timestamp, 'brl');
+  updateElements(cryptoData, timestamp, 'usd');
 }
 
 async function App () {

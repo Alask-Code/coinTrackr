@@ -34,7 +34,7 @@ body {
   flex-direction: column;
   padding: 18px;
   border-radius: 24px;
-  background: rgb(245, 245, 245);
+  background: linear-gradient(0deg, lightgray, white);
 }
 
 .row {
@@ -48,7 +48,23 @@ body {
   gap: 16px;
 }
 
-.row .image {
+.information {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  letter-spacing: 0.5px;
+  font-size: 14pt;
+  font-weight: 600;
+}
+
+.symbol {
+  font-size: 10pt;
+  opacity: 0.75;
+}
+
+.image {
   width: 90px;
   height: 90px;
   background-image: url("https://placehold.co/600x600");
@@ -57,8 +73,25 @@ body {
   background-position: center;
 }
 
+.price-change {
+  font-size: 16pt;
+  font-weight: 900;
+  background: linear-gradient(0deg, seagreen, rgb(0, 207, 0));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.currency {
+  padding: 4px 6px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.125);
+}
+
 .last-updated {
   position: fixed;
-  bottom: 48px;
+  bottom: 60px;
   right: 18px;
 }/*# sourceMappingURL=index.css.map */
