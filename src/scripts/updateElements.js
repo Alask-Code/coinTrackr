@@ -16,6 +16,6 @@ module.exports = {
   style: 'currency',
   currency: currency
 })}`;
-    lastUpdated.textContent = `Updated at ${timestamp.getHours() < 10 ? '0' + timestamp.getHours() : timestamp.getHours()}:${timestamp.getMinutes() < 10 ? '0' + timestamp.getMinutes() : timestamp.getMinutes()}`;
+    lastUpdated.textContent = `Updated at ${timestamp.getHours() < 10 ? '0' + timestamp.getHours() : timestamp.getHours()}:${timestamp.getMinutes() < 10 ? '0' + timestamp.getMinutes() : timestamp.getMinutes()}.`;
   }
 };

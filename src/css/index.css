@@ -34,7 +34,7 @@ body {
   flex-direction: column;
   padding: 18px;
   border-radius: 24px;
-  background: whitesmoke;
+  background: rgb(245, 245, 245);
 }
 
 .row {
@@ -60,4 +60,5 @@ body {
 .last-updated {
   position: fixed;
   bottom: 48px;
+  right: 18px;
 }/*# sourceMappingURL=index.css.map */

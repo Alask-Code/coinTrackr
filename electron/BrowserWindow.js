@@ -8,7 +8,7 @@ function createWindow () {
     title: 'coinTrackr',
     frame: false,
     width: 290,
-    height: 240,
+    height: 200,
     transparent: true,
     skipTaskbar: true,
     alwaysOnTop: true,
