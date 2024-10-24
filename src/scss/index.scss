@@ -23,9 +23,12 @@ body {
 .information {
   @include flex(center, flex-start, column);
   gap: 2px;
-  letter-spacing: 0.5px;
   font-size: 14pt;
   font-weight: 600;
+}
+.name {
+  font-size: 18pt;
+  font-weight: 800;
 }
 .symbol {
   font-size: 10pt;
@@ -38,10 +41,18 @@ body {
 .price-change {
   font-size: 16pt;
   font-weight: 900;
-  background: linear-gradient(0deg, seagreen, rgb(0, 207, 0));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  &.positive {
+    background: linear-gradient(0deg, seagreen, rgb(0, 207, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &.negative {
+    background: linear-gradient(0deg, crimson, rgb(220, 20, 60));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 .currency {
   padding: 4px 6px;

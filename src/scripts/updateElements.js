@@ -7,11 +7,19 @@ const {
 
 module.exports = {
   updateElements: (cryptoData, timestamp, currency) => {
+    // Image
     coinImage.style.backgroundImage = `url(${cryptoData.image.large})`;
+    // Name
     coinName.textContent = cryptoData.name;
+    // Symbol
     coinSymbol.textContent = String(cryptoData.symbol).toUpperCase();
+    // Currency
     coinCurrency.textContent = String(currency).toUpperCase();
-    coinPriceChange.textContent = Number(cryptoData.market_data.price_change_percentage_24h_in_currency[currency]).toFixed(2) + '%';
+    // Price Change
+    const priceChange = Number(cryptoData.market_data.price_change_percentage_24h_in_currency[currency]).toFixed(2);
+    coinPriceChange.classList.add(priceChange > 0 ? 'positive' : 'negative');
+    coinPriceChange.classList.remove(priceChange < 0 ? 'positive' : 'negative');
+    coinPriceChange.textContent = priceChange + '%';
     coinPrice.textContent = `${cryptoData.market_data.current_price[currency].toLocaleString('en-US', {
   style: 'currency',
   currency: currency
