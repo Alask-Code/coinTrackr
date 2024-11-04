@@ -7,4 +7,5 @@
       "savePathReplacementPairs": null
     }
   ],
+  "git.ignoreLimitWarning": true,
 }
