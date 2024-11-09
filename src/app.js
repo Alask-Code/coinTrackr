@@ -5,19 +5,24 @@ const flags = {
   communityData: false,
   developerData: false
 };
-async function init () {
+async function sync ({ id, currency }) {
   const fetchCoinPrice = require('./api/fetchCripto');
   const { updateElements } = require('./scripts/updateElements');
-  const cryptoData = await fetchCoinPrice('bitcoin', flags);
+  const cryptoData = await fetchCoinPrice(id, flags);
   console.log(cryptoData);
   const timestamp = new Date(cryptoData.last_updated);
-  updateElements(cryptoData, timestamp, 'brl');
+  updateElements(cryptoData, timestamp, currency);
 }
 
+const info = {
+  id: 'bitcoin',
+  currency: 'brl'
+};
+
 async function App () {
-  init();
+  sync(info);
   setInterval(async () => {
-    init();
+    sync(info);
   }, 1000 * 55);
 }
 
