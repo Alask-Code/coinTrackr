@@ -1,10 +1,7 @@
 const { API_ENDPOINT, COINGECKO_API_KEY } = process.env;
 
-module.exports = async function fetchCoinPrice (id, {
-  localization = Boolean, tickers = Boolean,
-  communityData = Boolean, developerData = Boolean
-}) {
-  return await fetch(`${API_ENDPOINT}/coins/${id}?localization=${localization}&tickers=${tickers}&community_data=${communityData}&developer_data=${developerData}`, {
+module.exports = async function fetchCoinPrice (id) {
+  return await fetch(`${API_ENDPOINT}/coins/${id}?localization=false&tickers=false&community_data=false`, {
     method: 'GET',
     headers: {
       accept: 'application/json',

@@ -9,6 +9,7 @@
      -moz-user-select: none;
           user-select: none;
   font-family: "Inter";
+  transition: 0.05s ease-in-out;
   box-sizing: border-box;
 }
 
@@ -35,6 +36,12 @@ body {
   padding: 18px;
   border-radius: 24px;
   background: linear-gradient(0deg, lightgray, white);
+}
+@media (prefers-color-scheme: dark) {
+  .app {
+    color: whitesmoke;
+    background: linear-gradient(0deg, #3a3a3a, #666666);
+  }
 }
 
 .row {
@@ -100,6 +107,12 @@ body {
   color: rgba(0, 0, 0, 0.75);
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.125);
+}
+@media (prefers-color-scheme: dark) {
+  .currency {
+    color: rgba(153, 153, 153, 0.75);
+    background: rgba(153, 153, 153, 0.125);
+  }
 }
 
 .last-updated {

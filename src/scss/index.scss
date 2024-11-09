@@ -9,6 +9,11 @@ body {
   @include size(100%, 100%);
   @include flex(space-between, center, column);
 
+  @media (prefers-color-scheme: dark) {
+    color: whitesmoke;
+    background: linear-gradient(0deg, darken(lightgray, 60%), darken(white, 60%));
+  }
+
   padding: 18px;
   border-radius: 24px;
   background: linear-gradient(0deg, lightgray, white);
@@ -55,6 +60,11 @@ body {
   }
 }
 .currency {
+  @media (prefers-color-scheme: dark) {
+    color: lighten(rgba(0, 0, 0, 0.75), 60%);
+    background: lighten(rgba(0, 0, 0, 0.125), 60%);
+  }
+
   padding: 4px 6px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.75);
